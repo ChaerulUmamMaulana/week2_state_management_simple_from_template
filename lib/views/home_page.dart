@@ -24,8 +24,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   get floatingActionButton => null;
 
- 
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -77,25 +75,26 @@ class _MyHomePageState extends State<MyHomePage> {
           floatingActionButton: Row(
             mainAxisAlignment: .end,
             children: [
-              FloatingActionButton(onPressed: () {
-                value.decrement();
-              },
-              tooltip: 'Decrement',
-              child: const Icon(Icons.remove),
-              ),  
-            
-          SizedBox(width: 210),
-           FloatingActionButton(
-            onPressed: () {
-              value.increment();
-            },
-            tooltip: 'Increment',
-            child: const Icon(Icons.add),
+              FloatingActionButton(
+                onPressed: () {
+                  value.decrement();
+                },
+                tooltip: 'Decrement',
+                child: const Icon(Icons.remove),
+              ),
+
+              SizedBox(width: 215),
+              FloatingActionButton(
+                onPressed: () {
+                  value.increment();
+                },
+                tooltip: 'Increment',
+                child: const Icon(Icons.add),
+              ),
+            ],
           ),
-            ]
-          )
         );
-      }
+      },
     );
   }
 }
