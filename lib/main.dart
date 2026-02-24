@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state_management/counter_model.dart';
+import 'package:state_management/models/counter_model.dart';
+import 'package:state_management/views/home_page.dart';
 
 void main() {
   runApp(
@@ -9,7 +10,7 @@ void main() {
       child: const MyApp(),
     )
   );
-  
+
 }
 
 class MyApp extends StatelessWidget {
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

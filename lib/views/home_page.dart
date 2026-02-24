@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state_management/counter_model.dart';
+import 'package:state_management/models/counter_model.dart';
 import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -22,6 +22,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  get floatingActionButton => null;
+
  
 
   @override
@@ -71,13 +73,27 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          floatingActionButton: FloatingActionButton(
+
+          floatingActionButton: Row(
+            mainAxisAlignment: .end,
+            children: [
+              FloatingActionButton(onPressed: () {
+                value.decrement();
+              },
+              tooltip: 'Decrement',
+              child: const Icon(Icons.remove),
+              ),  
+            
+          SizedBox(width: 200),
+           FloatingActionButton(
             onPressed: () {
               value.increment();
             },
             tooltip: 'Increment',
             child: const Icon(Icons.add),
           ),
+            ]
+          )
         );
       }
     );
