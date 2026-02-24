@@ -84,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: const Icon(Icons.remove),
               ),  
             
-          SizedBox(width: 200),
+          SizedBox(width: 210),
            FloatingActionButton(
             onPressed: () {
               value.increment();
